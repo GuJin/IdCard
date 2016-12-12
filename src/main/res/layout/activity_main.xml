@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:title="@string/search_info"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/textInputLayout_id_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:counterEnabled="true"
+            app:counterMaxLength="18"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789xX"
+                android:hint="@string/edit_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="number"
+                android:maxLines="1"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp">
+
+            <Button
+                android:id="@+id/btn_main_search"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="36dp"
+                android:text="@string/btn_search"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:translationZ="10dp"
+                android:visibility="gone"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:lineSpacingExtra="6dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        />
+</LinearLayout>

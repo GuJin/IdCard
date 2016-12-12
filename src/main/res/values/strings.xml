@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">身份证查询</string>
+    <string name="search_info">信息查询</string>
+    <string name="search_leak">泄露查询</string>
+    <string name="search_loss">挂失查询</string>
+    <string name="btn_search">查询</string>
+    <string name="edit_hint">身份证号码</string>
+
+    <string name="result_id_number">身份证号&#160;&#160;</string>
+    <string name="result_tips">状态&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="result_unknow">未知</string>
+    <!-- search -->
+    <string name="result_birthday">出生日期&#160;&#160;</string>
+    <string name="result_area">所在地&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="result_sex">性别&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <!-- leak -->
+    <string name="result_leak_res_1">安全</string>
+    <string name="result_leak_res_2">疑似泄露</string>
+    <!-- loss -->
+    <string name="result_loss_res_1">未挂失</string>
+    <string name="result_loss_res_2">挂失</string>
+
+    <string name="search_fail">查询失败</string>
+
+    <string name="error_hint_exceed_18">身份证位数超过18位</string>
+    <string name="error_hint_subter_18">身份证位数小于18位</string>
+    <string name="error_code_203802">错误的身份证或无结果</string>
+    <string name="error_code_203803">身份证校验位不正确</string>
+
+    <string name="i_know">我知道了</string>
+</resources>
