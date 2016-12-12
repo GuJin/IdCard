@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.gujin.idcard"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        resConfigs "zh", "en"
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "appKey", "hide"
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        release {
+            buildConfigField "String", "appKey", "hide"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+}
